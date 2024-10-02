@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Primary App Colors -->
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="purple_200">#BB86FC</color>
+
+    <!-- Background and Surface Colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F5F5F5</color>
+
+    <!-- Accent Colors -->
+    <color name="accent">#03DAC5</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Button Text Colors -->
+    <color name="button_text">#FFFFFF</color>
+
+    <!-- Icon and Button Colors -->
+    <color name="icon_tint">#FFFFFF</color>
+    <color name="button_background">#6200EE</color>
+</resources>
