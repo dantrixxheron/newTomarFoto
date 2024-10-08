@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
         // Cargar las fotos de manera inicial
         mostrarFotos()
 
-        // Set up click listeners for buttons
-
         btnTomarFoto.setOnClickListener {
             tomarFoto()
         }
@@ -103,12 +101,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 photoAdapter.notifyDataSetChanged()
-                // Mostrar la primera imagen si hay fotos disponibles
-                if (photoList.isNotEmpty()) {
-                    val firstPhotoPath = photoList[0]
-                    val bitmap = BitmapFactory.decodeFile(firstPhotoPath)
-                    imgFoto.setImageBitmap(bitmap)
-                }
             }
         } else {
             Toast.makeText(this, "No hay fotos en la carpeta", Toast.LENGTH_SHORT).show()
