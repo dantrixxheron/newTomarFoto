@@ -6,6 +6,10 @@ plugins {
 android {
     namespace = "com.example.tomarfoto2"
     compileSdk = 34
+        defaultConfig {
+            vectorDrawables.useSupportLibrary = true
+        }
+
 
     defaultConfig {
         applicationId = "com.example.tomarfoto2"
@@ -36,7 +40,7 @@ android {
 }
 
 dependencies {
-
+    implementation("com.google.android.material:material:1.4.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

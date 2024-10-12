@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:padding="16dp"
+    tools:context=".MainActivity"
     android:background="?android:attr/windowBackground">
 
     <!-- Title TextView -->
@@ -22,9 +22,9 @@
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- ImageView to display photos -->
+    <!-- ImageView to display selected photos -->
     <ImageView
         android:id="@+id/imgFoto"
         android:layout_width="0dp"
@@ -38,19 +38,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.4" />
 
-    <!-- ListView for showing photo file names -->
-    <ListView
-        android:id="@+id/photoListView"
+    <!-- RecyclerView for showing photo list with action menu -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photoRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp"
-        android:background="@android:color/white"
+        android:layout_marginBottom="16dp"
         app:layout_constraintTop_toBottomOf="@+id/imgFoto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btnTomarFoto"
-        app:layout_constraintHeight_percent="0.3" /> <!-- Set a height percentage -->
+        app:layout_constraintHeight_percent="0.3" />
 
     <!-- LinearLayout for action buttons -->
     <LinearLayout
@@ -72,9 +70,8 @@
             android:drawableStart="@android:drawable/ic_menu_camera"
             android:drawablePadding="8dp"
             android:padding="12dp"
-            android:backgroundTint="@color/purple_500"
+            android:backgroundTint="@color/button_background"
             android:textColor="@android:color/white" />
-
         <!-- Button to show saved photos -->
         <Button
             android:id="@+id/btnMostrarFotos"
@@ -86,8 +83,9 @@
             android:drawableStart="@android:drawable/ic_menu_gallery"
             android:drawablePadding="8dp"
             android:padding="12dp"
-            android:backgroundTint="@color/purple_500"
+            android:backgroundTint="@color/button_background"
             android:textColor="@android:color/white" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
